@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is Intro 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9x-wG-Bqr">
+                                <rect key="frame" x="20" y="20" width="560" height="21"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b36-T2-16J">
+                                <rect key="frame" x="20" y="51" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button To Do Something"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This is text field to enter something" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQq-VA-5os">
+                                <rect key="frame" x="20" y="101" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B9L-Qe-li1">
+                                <rect key="frame" x="20" y="231" width="560" height="121"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is intro 4 in stack view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV0-uh-Bis">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNZ-rI-9eB">
+                                        <rect key="frame" x="0.0" y="41" width="560" height="30"/>
+                                        <state key="normal" title="Button in stack view"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Intro 4 text field in stack view" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eL8-Qn-Urm">
+                                        <rect key="frame" x="0.0" y="91" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SNZ-rI-9eB" firstAttribute="leading" secondItem="B9L-Qe-li1" secondAttribute="leading" id="1tS-Vc-cIs"/>
+                                    <constraint firstItem="eL8-Qn-Urm" firstAttribute="leading" secondItem="B9L-Qe-li1" secondAttribute="leading" id="EmS-Ap-zeN"/>
+                                    <constraint firstAttribute="trailing" secondItem="eL8-Qn-Urm" secondAttribute="trailing" id="UmL-8R-hQe"/>
+                                    <constraint firstAttribute="trailing" secondItem="SNZ-rI-9eB" secondAttribute="trailing" id="WXY-ly-hql"/>
+                                    <constraint firstAttribute="trailing" secondItem="cV0-uh-Bis" secondAttribute="trailing" id="lvb-k0-cu7"/>
+                                    <constraint firstItem="cV0-uh-Bis" firstAttribute="leading" secondItem="B9L-Qe-li1" secondAttribute="leading" id="xYM-XC-YAe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wQq-VA-5os" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BzW-6f-Wjm"/>
+                            <constraint firstItem="b36-T2-16J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DEN-sc-3un"/>
+                            <constraint firstItem="wQq-VA-5os" firstAttribute="top" secondItem="b36-T2-16J" secondAttribute="bottom" constant="20" id="HaJ-f0-b4d"/>
+                            <constraint firstItem="B9L-Qe-li1" firstAttribute="top" secondItem="wQq-VA-5os" secondAttribute="bottom" constant="100" id="ZJG-UV-Sk6"/>
+                            <constraint firstItem="b36-T2-16J" firstAttribute="top" secondItem="r9x-wG-Bqr" secondAttribute="bottom" constant="10" id="ZLx-Nn-f4Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B9L-Qe-li1" secondAttribute="trailing" id="aCA-bB-sxa"/>
+                            <constraint firstItem="r9x-wG-Bqr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hlX-49-b4r"/>
+                            <constraint firstItem="wQq-VA-5os" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oFV-f2-oNi"/>
+                            <constraint firstItem="B9L-Qe-li1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="om3-iw-DuA"/>
+                            <constraint firstItem="r9x-wG-Bqr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wrK-53-UWE"/>
+                            <constraint firstItem="r9x-wG-Bqr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yOp-d8-dHL"/>
+                            <constraint firstItem="b36-T2-16J" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ybt-cc-iJK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
